@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock-Paper-Scissors</title>
+    <!-- we can use multiple link elements to load multiple css files -->
+    <link rel="stylesheet" href="../styles/10-rock-paper-scissors.css">
+  </head>
+
+
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <button onclick="
+      //pickComputerMove();
+      playGame('rock');
+    " class="move-button"><image src="../images/rock-emoji.png" class="move-icon"></image></button>
+    <button onclick="
+      //pickComputerMove();
+      playGame('paper');
+      
+    " class="move-button"><img src="../images/paper-emoji.png" class="move-icon" alt=""></button>
+    <button onclick="
+      //pickComputerMove();
+      playGame('scissors');
+      
+      " class="move-button"><img src="../images/scissors-emoji.png" class="move-icon" alt=""></button>
+
+
+      <p class="js-result result"></p>
+      <p class="js-moves"></p>
+      <p class="js-score score"></p>
+
+    <button onclick="
+      score.wins=0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement();
+    " class="reset-score-button">Reset Score</button>
+
+      <!-- here, we can use multiple script elements in sequence
+      like  
+      <script src="scripts/file1.js"></script>
+      <script src="scripts/file2.js"></script>
+      <script src="scripts/file2.js"></script> -->
+
+      <script src="../scripts/10-rock-paper-scissors.js"></script>
+
+  </body>
+</html> 
